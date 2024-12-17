@@ -119,7 +119,9 @@ export const generateFile = async (clipboard: ClipboardEntry[], options: Generat
     doc.setFont("helvetica", "bold");
     doc.text("Mot de passe:", x + boxPadding, currentY + boxPadding + 20);
     doc.setFont("helvetica", "normal");
-    doc.text(clipboard[i + 1].content, x + boxPadding, currentY + boxPadding + 25);
+    if (clipboard[i + 1]) {
+      doc.text(clipboard[i + 1].content, x + boxPadding, currentY + boxPadding + 25);
+    }
 
     // Mettre à jour la position Y seulement après avoir traité les deux colonnes
     if (!isLeftColumn) {

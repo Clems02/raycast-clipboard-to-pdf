@@ -41,14 +41,8 @@ export const ButtonGenerateFile = ({ clipboard, setIsMonitoring }: ButtonGenerat
                     id="teacherName"
                     title="Nom de l'enseignant"
                     placeholder="Entrez le nom de l'enseignant"
-                    defaultValue="CHAUMONT"
                   />
-                  <Form.TextField
-                    id="className"
-                    title="Classe"
-                    placeholder="Entrez le nom de la classe"
-                    defaultValue="9e9"
-                  />
+                  <Form.TextField id="className" title="Classe" placeholder="Entrez le nom de la classe" />
                 </Form>
               }
             />
