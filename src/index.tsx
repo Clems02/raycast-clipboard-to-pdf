@@ -5,6 +5,7 @@ import { ButtonToggleMonitoring } from "./components/ButtonToggleMonitoring";
 import { ClipboardList } from "./components/ClipboardList";
 import { useClipboard } from "./hook/useClipboard";
 import { useMonitoring } from "./hook/useMonitoring";
+import { ButtonOpenFolder } from "./components/ButtonOpenFolder";
 
 export default function Command() {
   const { isMonitoring, setIsMonitoring } = useMonitoring();
@@ -16,6 +17,7 @@ export default function Command() {
         <ButtonToggleMonitoring isMonitoring={isMonitoring} setIsMonitoring={setIsMonitoring} />
         <ButtonGenerateFile clipboard={clipboard} setIsMonitoring={setIsMonitoring} />
         <ButtonClearClipboard setClipboard={setClipboard} />
+        <ButtonOpenFolder />
       </List.Section>
       <ClipboardList items={clipboard} onDelete={deleteItem} />
     </List>
